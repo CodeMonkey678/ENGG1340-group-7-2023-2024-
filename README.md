@@ -5,4 +5,4 @@ GROUP MEMBERS: TSE Wang Pok (UID: 3036065642), Palden TAMANG (UID: 3036106240)
 GROUP NUMBER: group 7
 
 PROJECT DESCRIPTION:
-Maze game
+Maze Master the maze game
