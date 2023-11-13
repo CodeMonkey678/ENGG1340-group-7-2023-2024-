@@ -2,10 +2,6 @@
 #include<string>
 #include<fstream>
 using namespace std;
-//import three different level mazes in the game.
-#include "Simple_Level_Maze.h" 
-#include "Middle_Level_Maze.h"
-#include "High_Level_Maze.h"
 
 int main()
 {
