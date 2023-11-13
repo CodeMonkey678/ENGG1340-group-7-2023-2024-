@@ -4,3 +4,11 @@ EXECUTABLE = pacman
 LDFLAGS = -lncursesw
 OBJECTS = 
 
+
+
+clean:
+  rm -f main
+	
+.PHONY: clean
+
+
