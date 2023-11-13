@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
+// this is a primary level maze --- TSE Wang Pok
 int main()
 {
   char aa[15][12] = 
