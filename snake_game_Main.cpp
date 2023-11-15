@@ -1,5 +1,5 @@
 #include<ncurses.h> //ncurses is a library for creating text-based user interface. eg. handling user keyboard input
-#include "src/Board.hpp"
+#include "src/Board.hpp" // it is a header file
 
 #define BOARD_DIM 20
 #define BOARD_ROWS BOARD_DIM
@@ -12,11 +12,7 @@ int main(int argc, char **argv)
 
   //making the gameboard
   //get the x and y axis size
-  int xMax, yMax;
-  getxy(stdscr,yMax,xMax);
-  WINDOW * board_win = newwin(BOARD_ROWS, BOARD_COLS, (yMax/2)-(BOARD_ROWS-2), (xMax/2)-(BOARD_COLS-2));//(height,width, display in the middle)-->make a square window
-  box(board_win,0,0);
-  wrefresh(board_win);//refresh the window
+  Board board(BOARD_ROWS, BOARD_COLS);
   
   getch();
   endwin();
