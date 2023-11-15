@@ -27,4 +27,4 @@ class SnakeGame
 private:
   Board board;
   bool game_over;
-}
+};
