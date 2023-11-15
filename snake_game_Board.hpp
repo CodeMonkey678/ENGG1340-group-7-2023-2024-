@@ -3,15 +3,13 @@
 class Board
 {
 public:
+      Board()
+      {
+        construct(0, 0);
+      }
       Board(int height, int width)
       {
-        //making the gameboard
-        //get the x and y axis size
-        int xMax, yMax;
-        getxy(stdscr,yMax,xMax);
-            
-        board_win = newwin(height, width, (yMax/2)-(height-2), (xMax/2)-(width-2));//(height,width, display in the middle)-->make a square window
-        initialize();
+        construct(height, width);
       }
       void initialize()
       {
@@ -43,4 +41,10 @@ public:
 
 private:
       WINDOW * board_win;
+      void construct (int height, int width)
+      {
+        int xMax, yMax;
+        getmaxyx(stdscr, yMax, xMax);
+        board_win = newwin(height, width, (yMax/2)-(height-2), (xMax/2)-(width-2));//(height,width, display in the middle)-->make a square window
+      }
 };
