@@ -13,6 +13,7 @@ int main(int argc, char **argv)
   //making the gameboard
   //get the x and y axis size
   Board board(BOARD_ROWS, BOARD_COLS);
+  board.initialize();
 
   //add a character on the board
   board.addAt(5,5,'#');
