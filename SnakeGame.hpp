@@ -6,11 +6,12 @@ class SnakeGame
 {
   SnakeGame (int height, int width)
   {
-    
+    board = Board(height, width);
+    game_over = false;
   }
   void processInput()
   {
-    
+    chtype input = board.getInput();
   }
   void updateState()
   {
@@ -18,11 +19,11 @@ class SnakeGame
   }
   void redraw()
   {
-    
+    board.refresh();
   }
   bool isOver()
   {
-    
+    return game_over;
   }
 private:
   Board board;
