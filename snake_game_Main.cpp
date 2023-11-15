@@ -15,9 +15,13 @@ int main(int argc, char **argv)
   Board board(BOARD_ROWS, BOARD_COLS);
   board.initialize();
 
-  //add a character on the board
-  board.addAt(5,5,'#');
-  board.refresh();
+  //1.get input from user
+  
+  //2.update game state
+
+  //3.redraw display
+
+  //4.go to step 1, unless game over
   
   getch();
   endwin();
