@@ -10,10 +10,7 @@ int main(int argc, char **argv)
   initscr();
   refresh();
 
-  //making the gameboard
-  //get the x and y axis size
-  Board board(BOARD_ROWS, BOARD_COLS);
-  board.initialize();
+  SnakeGame game(BOARD_ROWS, BOARD_COLS);
 
   //1.get input from user
   
