@@ -9,14 +9,20 @@ int main(int argc, char **argv)
 {
   initscr();
   refresh();
-
+  //noecho();
   SnakeGame game(BOARD_ROWS, BOARD_COLS);
 
-  //1.get input from user
-  
-  //2.update game state
+  while (!game.isOver())//while game is not over
+  {
+    game.processInput();
+    //1.get input from user
+    
+    game.updateState();
+    //2.update game state
 
-  //3.redraw display
+    game.redraw();
+    //3.redraw display
+  }
 
   //4.go to step 1, unless game over
   
