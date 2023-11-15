@@ -8,6 +8,7 @@ public:
   SnakeGame (int height, int width)
   {
     board = Board(height, width);
+    board.initialize();
     game_over = false;
   }
   void processInput()
