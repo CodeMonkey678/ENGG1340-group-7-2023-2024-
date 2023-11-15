@@ -4,6 +4,7 @@
 
 class SnakeGame
 {
+public:
   SnakeGame (int height, int width)
   {
     board = Board(height, width);
