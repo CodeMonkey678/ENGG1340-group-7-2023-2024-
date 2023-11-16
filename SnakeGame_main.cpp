@@ -100,6 +100,10 @@ public:
 
     void Input() {
         string input;
+        
+        bool btnUP=false, btnDOWN=false,
+            btnLEFT=false, btnRIGHT=false;
+        
         if (cin >> input) {
             if (input == "w" && dir != DOWN) {
                 dir = UP;
