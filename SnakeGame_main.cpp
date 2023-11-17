@@ -191,22 +191,23 @@ public:
         }
     }
 
+    int maxSnakeSize = 15;
     void Logic() {
-        Position prevTail = snake.empty() ? Position{ 0, 0 } : snake.back();
+        Position prevTail = snake.empty() ? Position{0, 0} : snake.back();
         Position prevHead = head;
         switch (dir) {
-        case UP:
-            head.y--;
-            break;
-        case DOWN:
-            head.y++;
-            break;
-        case LEFT:
-            head.x--;
-            break;
-        case RIGHT:
-            head.x++;
-            break;
+            case UP:
+                head.y--;
+                break;
+            case DOWN:
+                head.y++;
+                break;
+            case LEFT:
+                head.x--;
+                break;
+            case RIGHT:
+                head.x++;
+                break;
         }
 
         if (head.x >= width || head.x < 0 || head.y >= height || head.y < 0) {
@@ -215,26 +216,22 @@ public:
         }
 
         if (head.x == apple.x && head.y == apple.y) {
-            score++;
+            score += 100;
             apple = GenerateApple();
-        }
-        else {
-            if (!snake.empty()) {
-                snake.pop_back();
-            }
+            snake.push_back(prevTail);  // Increase snake size by adding the previous tail
+        } else {
+            snake.pop_back();  // Remove the tail on every move
         }
 
+        // Check for collision with snake body
         for (int i = 1; i < snake.size(); i++) {
-            if (head.x == snake[i].x && head.y == snake[i].y) {
+            if (head.x== snake[i].x && head.y == snake[i].y) {
                 gameOver = true;
                 break;
             }
         }
 
         snake.insert(snake.begin(), head);
-        if (prevTail.x != 0 || prevTail.y != 0) {
-            snake.push_back(prevTail);
-        }
     }
 
     void Run() {
@@ -245,6 +242,13 @@ public:
                 Logic();
             }
             this_thread::sleep_for(chrono::milliseconds(400));
+        }
+       
+        if (gameOver) {
+            cout << "\033[2J\033[H";
+            cout << "Game over" << endl;
+            cout << "Thank you for playing!" <<endl;
+            cout << "\n\n";
         }
     }
    
