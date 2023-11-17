@@ -247,12 +247,23 @@ public:
             this_thread::sleep_for(chrono::milliseconds(400));
         }
     }
+   
+    //Requests user to input name
+    void Name()
+    {
+        cout << "\033[2J\033[H";
+        cout << "Welcome to the game" << endl;
+        cout << "What is your name? (no spaces)" << endl;
+        cin >> name;
+        cout << "\033[2J\033[H";
+    }
 };
 
 int main() {
         srand(static_cast<unsigned>(time(nullptr)));
 
         SnakeGame game;
+        game.Name();
         game.Run();
 
         return 0;
