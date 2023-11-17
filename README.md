@@ -14,7 +14,7 @@ use arrow keys to navigate the main menu. view your previous highscores -> tied 
 
 Enter a name for you scores to be recorded under Loading animation Game
 
-use the WASD or arrow keys to control the character 
+use the WASD to control the snake 
 
 start the game with ./mazegame after compiling and linking using "make compile"
 
