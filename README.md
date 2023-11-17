@@ -1,18 +1,12 @@
 README
 
-GROUP MEMBERS: TSE Wang Pok (UID: 3036065642), Palden TAMANG (UID: 3036106240), Ho Chun Kau (UID: 3036068876)
+GROUP MEMBERS: TSE Wang Pok (UID: 3036065642), Palden TAMANG (UID: 3036106240), Ho Chun Kau (UID: 3036068876) , Abraham CHANDAFA (UID: )
 
 GROUP NUMBER: group 7
 
-PROJECT DESCRIPTION:
-Maze Master the maze game
+PROJECT DESCRIPTION: Snake master the snake game
 
-
-Main menu
-
-use arrow keys to navigate the main menu. view your previous highscores -> tied to the name you input quit the game play the game Loading sequence
-
-Enter a name for you scores to be recorded under Loading animation Game
+Enter your name
 
 use the WASD to control the snake 
 
