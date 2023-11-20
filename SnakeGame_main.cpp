@@ -78,12 +78,12 @@ char getche(void)
 
 
 using namespace std;
-
+//x is the position along the x-axis, y is the position along the y-axis
 struct Position {
     int x;
     int y;
 };
-
+//enum is a user-defined enumeration, which represents four directions. up is 0, down is 1, left is 2, right is 3.
 enum Direction {
     UP,
     DOWN,
@@ -93,25 +93,27 @@ enum Direction {
 
 class SnakeGame {
 private:
+    // this is the size of the gameboard
     const int width = 40;
     const int height = 20;
+
     bool gameOver;
     Position apple;
     Position head;
-    vector<Position> snake;
+    vector<Position> snake;//this vector stores the positions of the snake.
     Direction dir;
     int score;
 
 public:
     SnakeGame() {
-        gameOver = false;
-        head = { width / 2, height / 2 };
+        gameOver = false; // initializes the game
+        head = { width / 2, height / 2 };// head position of the snake
         apple = GenerateApple();
-        dir = RIGHT;
+        dir = RIGHT;//initial direction of the snake
         score = 0;
-        snake.push_back(head);
+        snake.push_back(head);// it adds the head position to the snake vector. Ensures that snake only have head at the beginning
     }
-
+// set the position of the apple
     Position GenerateApple() {
         Position newApple;
         newApple.x = rand() % width;
@@ -124,7 +126,7 @@ public:
         cout << "\033[2J\033[H";
 
         for (int i = 0; i < width + 2; i++) {
-            cout << "#";
+            cout << "#";//print out the gameboard
         }
         cout << endl;
 
@@ -134,12 +136,14 @@ public:
                     cout << "#";
                 }
                 if (i == head.y && j == head.x) {
-                    cout << "O";
+                    cout << "O";//print the head of snake
                 }
                 else if (i == apple.y && j == apple.x) {
-                    cout << "A";
+                    cout << "A";//print the apple
                 }
                 else {
+                    //to check current position corresponds to any body segment of the snake.
+                    //if true then print the character to represent the body segment.
                     bool isBodyPart = false;
                     for (int k = 1; k < snake.size(); k++) {
                         if (snake[k].x == j && snake[k].y == i) {
@@ -164,10 +168,10 @@ public:
         }
         cout << endl;
 
-        cout << "Score: " << score << endl;
+        cout << "Score: " << score << endl;//print the score
     }
 
-
+//this is user input to control the snake's direction
     void Input() {
         if (keyboardhit())
         {
@@ -192,9 +196,11 @@ public:
     }
 
     int maxSnakeSize = 15;
+// handle the logical operations of the game, update the positions of snake's head and body segments based on current direction
     void Logic() {
         Position prevTail = snake.empty() ? Position{0, 0} : snake.back();
         Position prevHead = head;
+        //adjust the position by add and minus the coordinate of x and y of the snake.
         switch (dir) {
             case UP:
                 head.y--;
