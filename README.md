@@ -4,7 +4,7 @@ GROUP MEMBERS: TSE Wang Pok (UID: 3036065642), TAMANG PALDEN (UID: 3036106240), 
 
 GROUP NUMBER: group 7
 
-PROJECT DESCRIPTION: Snake master the snake game
+PROJECT DESCRIPTION: Snake Master (the snake game)
 
 Enter your name
 
