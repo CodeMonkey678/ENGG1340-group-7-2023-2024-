@@ -1,1 +1,11 @@
-
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+#include <string>
+#include <thread>
+#include <chrono>
+#include <termios.h>
+#include <sys/ioctl.h>
+#include <stdio.h>
+#include <unistd.h>
