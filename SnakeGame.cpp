@@ -41,7 +41,7 @@ bool keyboardhit() {
 }
 
 void resetTermios(void) {
-    // implementation
+    tcsetattr(0, TCSANOW, &old);
 }
 
 char getch_(int echo) {
