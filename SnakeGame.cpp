@@ -193,7 +193,21 @@ void SnakeGame::Logic() {
 }
 
 void SnakeGame::Run() {
-    // implementation
+    while (!gameOver) {
+        Draw();
+        Input();
+        if (!gameOver) {
+            Logic();
+        }
+        this_thread::sleep_for(chrono::milliseconds(400));
+    }
+       
+    if (gameOver) {
+        cout << "\033[2J\033[H";
+        cout << "Game over" << endl;
+        cout << "Thank you for playing!" <<endl;
+        cout << "\n\n";
+    }
 }
 
 void SnakeGame::Name() {
