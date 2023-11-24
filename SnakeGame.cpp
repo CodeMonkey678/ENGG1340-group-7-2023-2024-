@@ -57,7 +57,7 @@ char GETCH(void) {
 }
 
 char getche(void) {
-    // implementation
+    return getch_(1);
 }
 
 SnakeGame::SnakeGame() {
