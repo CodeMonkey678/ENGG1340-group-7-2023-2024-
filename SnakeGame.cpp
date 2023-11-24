@@ -127,7 +127,26 @@ void SnakeGame::Draw() {
 }
 
 void SnakeGame::Input() {
-    // implementation
+    if (keyboardhit())
+    {
+        char input = GETCH();
+            
+        if (input == 'w' && dir != DOWN) {
+            dir = UP;
+        }
+        else if (input == 's' && dir != UP) {
+            dir = DOWN;
+        }
+        else if (input == 'a' && dir != RIGHT) {
+            dir = LEFT;
+        }
+        else if (input == 'd' && dir != LEFT) {
+            dir = RIGHT;
+        }
+        else if (input == 'x') {
+            gameOver = true;
+        }
+    }
 }
 
 void SnakeGame::Logic() {
