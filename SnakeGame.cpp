@@ -77,7 +77,53 @@ Position SnakeGame::GenerateApple() {
 }
 
 void SnakeGame::Draw() {
-    // implementation
+    // Clear the console output
+    cout << "\033[2J\033[H";
+
+    for (int i = 0; i < width + 2; i++) {
+        cout << "#";//print out the gameboard
+    }
+    cout << endl;
+
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (j == 0) {
+                cout << "#";
+            }
+            if (i == head.y && j == head.x) {
+                cout << "O";//print the head of snake
+            }
+            else if (i == apple.y && j == apple.x) {
+                cout << "A";//print the apple
+            }
+            else {
+                //to check current position corresponds to any body segment of the snake.
+                //if true then print the character to represent the body segment.
+                bool isBodyPart = false;
+                for (int k = 1; k < snake.size(); k++) {
+                    if (snake[k].x == j && snake[k].y == i) {
+                        cout << "o";
+                        isBodyPart = true;
+                        break;
+                    }
+                }
+                if (!isBodyPart) {
+                    cout << " ";
+                }
+            }
+            if (j == width - 1) {
+                cout << "#";
+            }
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < width + 2; i++) {
+        cout << "#";
+    }
+    cout << endl;
+
+    cout << "Score: " << score << endl;//print the score
 }
 
 void SnakeGame::Input() {
