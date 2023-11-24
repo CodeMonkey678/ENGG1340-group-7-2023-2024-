@@ -70,7 +70,10 @@ SnakeGame::SnakeGame() {
 }
 
 Position SnakeGame::GenerateApple() {
-    // implementation
+    Position newApple;
+    newApple.x = rand() % width;
+    newApple.y = rand() % height;
+    return newApple;
 }
 
 void SnakeGame::Draw() {
