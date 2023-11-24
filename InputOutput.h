@@ -1,8 +1,12 @@
 #ifndef INPUTOUTPUT_H
 #define INPUTOUTPUT_H
 
+#include <vector>
 #include <string>
 #include <iostream>
+#include "SnakeGame.h"
+
+struct Position;
 
 void clearConsole();
 void drawGameBoard(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score);
