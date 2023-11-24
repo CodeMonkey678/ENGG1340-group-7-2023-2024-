@@ -7,6 +7,7 @@
 #include <sys/ioctl.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <iostream>
 using namespace std;
 
 static struct termios old, newer;
