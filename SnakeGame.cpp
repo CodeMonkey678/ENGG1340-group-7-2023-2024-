@@ -11,7 +11,15 @@
 static struct termios old, newer;
 
 void initializeTermios(int echo) {
-    // implementation
+    //Gets the current terminal attributes from the file descriptor 0 (standard input) and stores them in struct old.
+    tcgetattr(0, &old);
+    newer = old;
+    //Sets the ICANON flag in the c_lflag field of newer to 0 (false) by performing a bitwise AND operation with the bitwise NOT of ICANON.
+    newer.c_lflag &= ~ICANON;
+    newer.c_lflag &= echo ? ECHO : ~ECHO;
+    //calls the tcsetattr function to set the terminal attributes for file descriptor 0 to the values in newer.
+    //The TCSANOW flag specifies that the changes should take effect immediately.
+    tcsetattr(0, TCSANOW, &newer);
 }
 
 bool keyboardhit() {
