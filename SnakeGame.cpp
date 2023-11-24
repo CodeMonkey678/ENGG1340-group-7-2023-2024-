@@ -211,5 +211,10 @@ void SnakeGame::Run() {
 }
 
 void SnakeGame::Name() {
-    // implementation
+    string name;
+    cout << "\033[2J\033[H";
+    cout << "Welcome to the game" << endl;
+    cout << "What is your name? (no spaces)" << endl;
+    cin >> name;
+    cout << "\033[2J\033[H";
 }
