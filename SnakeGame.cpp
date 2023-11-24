@@ -150,7 +150,46 @@ void SnakeGame::Input() {
 }
 
 void SnakeGame::Logic() {
-    // implementation
+    Position prevTail = snake.empty() ? Position{0, 0} : snake.back();
+    Position prevHead = head;
+    //adjust the position by add and minus the coordinate of x and y of the snake.
+    switch (dir) {
+        case UP:
+            head.y--;
+            break;
+        case DOWN:
+            head.y++;
+            break;
+        case LEFT:
+            head.x--;
+            break;
+        case RIGHT:
+            head.x++;
+            break;
+    }
+
+    if (head.x >= width || head.x < 0 || head.y >= height || head.y < 0) {
+        gameOver = true;  // Snake collided with the wall
+        return;
+    }
+
+    if (head.x == apple.x && head.y == apple.y) {
+        score += 100;
+        apple = GenerateApple();
+        snake.push_back(prevTail);  // Increase snake size by adding the previous tail
+    } else {
+        snake.pop_back();  // Remove the tail on every move
+    }
+
+    // Check for collision with snake body
+    for (int i = 1; i < snake.size(); i++) {
+        if (head.x== snake[i].x && head.y == snake[i].y) {
+            gameOver = true;
+            break;
+        }
+    }
+
+    snake.insert(snake.begin(), head);
 }
 
 void SnakeGame::Run() {
