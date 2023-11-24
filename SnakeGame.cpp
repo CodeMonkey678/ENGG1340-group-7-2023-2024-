@@ -53,7 +53,7 @@ char getch_(int echo) {
 }
 
 char GETCH(void) {
-    // implementation
+    return getch_(0);
 }
 
 char getche(void) {
