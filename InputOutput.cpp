@@ -6,11 +6,7 @@
 
 using namespace std;
 
-struct Position
-{
-    int x;
-    int y;
-}
+
 
 void clearConsole() {
     cout << "\033[2J\033[H";
