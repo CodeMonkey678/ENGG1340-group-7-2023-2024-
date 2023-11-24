@@ -45,7 +45,11 @@ void resetTermios(void) {
 }
 
 char getch_(int echo) {
-    // implementation
+    char ch;
+    initializeTermios(echo);
+    ch = getchar();
+    resetTermios();
+    return ch;
 }
 
 char GETCH(void) {
