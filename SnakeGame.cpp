@@ -23,7 +23,21 @@ void initializeTermios(int echo) {
 }
 
 bool keyboardhit() {
-    // implementation
+    termios term;
+    //tcgetattr is called to get the current terminal attributes for file descriptor 0
+    tcgetattr(0, &term);
+
+    termios term2 = term;
+    term2.c_lflag &= ~ICANON;
+    tcsetattr(0, TCSANOW, &term2);
+
+    int byteswaiting;
+    //called the ioctl function to determine how many bytes are waiting in the input buffer.
+    ioctl(0, FIONREAD, &byteswaiting);
+
+    tcsetattr(0, TCSANOW, &term);
+
+    return byteswaiting > 0;
 }
 
 void resetTermios(void) {
