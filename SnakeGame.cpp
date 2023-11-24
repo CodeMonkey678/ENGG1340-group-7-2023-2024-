@@ -61,7 +61,12 @@ char getche(void) {
 }
 
 SnakeGame::SnakeGame() {
-    // implementation
+    gameOver = false; // initializes the game
+    head = { width / 2, height / 2 };// head position of the snake
+    apple = GenerateApple();
+    dir = RIGHT;//initial direction of the snake
+    score = 0;
+    snake.push_back(head);// it adds the head position to the snake vector. Ensures that snake only have head at the beginning
 }
 
 Position SnakeGame::GenerateApple() {
