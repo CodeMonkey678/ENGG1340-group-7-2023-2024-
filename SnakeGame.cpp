@@ -1,4 +1,5 @@
 #include "SnakeGame.h"
+#include "InputOutput.h"
 #include <cstdlib>
 #include <ctime>
 #include <thread>
