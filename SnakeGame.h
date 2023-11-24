@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include "InputOutput.h"
 
 struct Position {
     int x;
