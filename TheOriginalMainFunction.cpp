@@ -261,11 +261,11 @@ public:
     //Requests user to input name
     void Name()
     {
-        string name;
+        string *name = new string;
         cout << "\033[2J\033[H";
         cout << "Welcome to the game" << endl;
         cout << "What is your name? (no spaces)" << endl;
-        cin >> name;
+        cin >> *name;
         cout << "\033[2J\033[H";
     }
 };
