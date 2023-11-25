@@ -197,7 +197,7 @@ void SnakeGame::Logic_Function() {
 
 void SnakeGame::Run_Function() {
     while (!gameOver) {
-        Drawing_Funtion();
+        Drawing_Function();
         Input_Function();
         if (!gameOver) {
             Logic_Function();
