@@ -6,20 +6,18 @@ GROUP NUMBER: group 7
 
 PROJECT DESCRIPTION: Snake Master (the snake game)
 
-Enter your name
+Starting the game: 
+start the game with ./snake after compiling and linking the files using "make compile"
+
+
+Playing the Game:
+Enter your name (without spaces)
 
 use the WASD to control the snake 
 
-start the game with ./mazegame after compiling and linking using "make compile"
+Use WASD to move the playable character. The snake will keep moving in the specified direction until another direction is pressed
 
-use arrow keys to navigate the main menu, press enter to click selected button
-
-Press enter on "Play Game" to start game Press enter on "HighScores" to see all highscores of your attempts Press enter on Quit to close the game and clear screen Once you press "Play Game", enter in a name to save your highscore under. If you use a name you already used before, the highscore will be overridden under that name -> given that you beat the previous score under that name. Press enter once you typed your name to begin playing
-
-Playing the Game:
-
-Use arrow keys or WASD to move the playable character. The character will move in the direction you set it forever until you change direction. 
-when you win or lose, your score is saved. winning happens when you eat all pills enter a winning page losing happens when a ghost touches you enter a losing page conclude winning/losing page Once you conclude the losing/winning page, you will be redirected to the main menu to view your highscores, play again, or quit. IMPLEMENTATION NOTES:
+IMPLEMENTATION NOTES:
 
 list of features:
 
