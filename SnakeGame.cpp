@@ -125,7 +125,7 @@ void SnakeGame::Drawing_Function() {
         cout << "#";
     }
     cout << endl;
-
+    cout << *name << " - ";
     cout << "Score: " << *score << endl;//print the score
 }
 
