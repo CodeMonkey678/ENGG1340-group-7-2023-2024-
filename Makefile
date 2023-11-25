@@ -1,30 +1,28 @@
-Executable= Snake
-LDFLAGS= -lncursew
-FLAGS = -pedantic-errors -std=c++11 gcd.o: gcd.cpp gcd.h
-Objects = main-2.o SnakeGame.o InputOutput.o
+EXECUTABLE = snake
+CXX = g++
+LDFLAGS = -lncursesw
+FLAGS = -pedantic-errors -std=c++11
+OBJECTS = main-2.o SnakeGame.o InputOutput.o
 
 main-2.o: main-2.cpp SnakeGame.h InputOutput.h
-	g++ $(FLAGS) -c $<
+	$(CXX) $(FLAGS) -c $< -o $@
 
-SnakeGame.o: SnakeGame.cpp Snakegame.h
-	g++ $(FLAGS) -c $<
+SnakeGame.o: SnakeGame.cpp SnakeGame.h
+	$(CXX) $(FLAGS) -c $< -o $@
 
 InputOutput.o: InputOutput.cpp InputOutput.h SnakeGame.h
-	g++ $(FLAGS) -c $<
+	$(CXX) $(FLAGS) -c $< -o $@
 
-Snake: main-2.o SnakeGame.o InputOutput.o
-	g++ $(FLAGS) $^ -o $@ $(Objects) $(LDFLAGS)
+compile: $(OBJECTS)
+	$(CXX) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS) $(LDFLAGS)
 
 clean:
-	rm -f $(Objets) Snake
+	rm -f $(OBJECTS) $(EXECUTABLE)
 
-run:
-	./$(Executable)
+run: $(EXECUTABLE)
+	./$(EXECUTABLE)
 
-	
-.PHONY: clean run
-
-
+.PHONY: compile clean run
 
 
 
