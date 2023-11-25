@@ -8,12 +8,12 @@ using namespace std;
 
 
 
-void clearConsole() {
+void Console_Clear() {
     cout << "\033[2J\033[H";
 }
 
-void drawGameBoard(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score) {
-    clearConsole();
+void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score) {
+    Console_Clear();
 
     for (int i = 0; i < width + 2; i++) {
         cout << "#";
@@ -59,14 +59,14 @@ void drawGameBoard(int width, int height, const Position& head, const Position& 
     cout << "Score: " << score << endl;
 }
 
-char getInput() {
+char Print_Input() {
     char input;
     cin >> input;
     return input;
 }
 
-void showGameOver() {
-    clearConsole();
+void Game_Over() {
+    Console_Clear();
     cout << "Game over" << endl;
     cout << "Thank you for playing!" << endl;
     cout << "\n\n";
