@@ -214,9 +214,18 @@ void SnakeGame::Run_Function() {
     }
 }
 void SnakeGame::Naming_Function() {
+    level = 1;
     cout << "\033[2J\033[H";
     cout << "Welcome to the game" << endl;
     cout << "What is your name? (no spaces)" << endl;
     cin >> *name;
+    cout << "Choose Game Difficulty by INSERTING 1,2,3 or 4:\n
+            1 for Easy,\n
+            2 for normal,\n
+            3 for Hard,\n
+            4 for Pro\n
+            LEVEL: ";
+    cin >> level;
+            
     cout << "\033[2J\033[H";
 }
