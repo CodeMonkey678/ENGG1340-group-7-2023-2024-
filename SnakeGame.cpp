@@ -206,6 +206,7 @@ void SnakeGame::Run_Function() {
     }
        
     if (gameOver) {
+        delete name; delete score;
         cout << "\033[2J\033[H";
         cout << "Game over" << endl;
         cout << "Thank you for playing!" <<endl;
