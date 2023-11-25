@@ -28,7 +28,7 @@ private:
     std::vector<Position> snake;
     Direction dir;
     int *score = new int(0);
-    string *name = new string;
+    std::string *name = new std::string;
 
 public:
     SnakeGame();
