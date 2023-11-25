@@ -134,19 +134,19 @@ void SnakeGame::Input_Function() {
     {
         char input = GETCH();
             
-        if (input == 'w' && dir != DOWN) {
+        if ((input == 'w' || input == 'W') && dir != DOWN) {
             dir = UP;
         }
-        else if (input == 's' && dir != UP) {
+        else if ((input == 's' || input == 'S') && dir != UP) {
             dir = DOWN;
         }
-        else if (input == 'a' && dir != RIGHT) {
+        else if ((input == 'a' || input == 'A') && dir != RIGHT) {
             dir = LEFT;
         }
-        else if (input == 'd' && dir != LEFT) {
+        else if ((input == 'd' || input == 'D') && dir != LEFT) {
             dir = RIGHT;
         }
-        else if (input == 'x') {
+        else if (input == 'x' || input == 'X') {
             gameOver = true;
         }
     }
