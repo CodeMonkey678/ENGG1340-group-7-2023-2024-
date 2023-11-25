@@ -125,7 +125,7 @@ void SnakeGame::Drawing_Function() {
         cout << "#";
     }
     cout << endl;
-    //cout << *name << " - ";
+    cout << *name << " - ";
     cout << "Score: " << *score << endl;//print the score
 }
 
@@ -213,7 +213,6 @@ void SnakeGame::Run_Function() {
     }
 }
 void SnakeGame::Naming_Function() {
-    string *name = new string;
     cout << "\033[2J\033[H";
     cout << "Welcome to the game" << endl;
     cout << "What is your name? (no spaces)" << endl;
