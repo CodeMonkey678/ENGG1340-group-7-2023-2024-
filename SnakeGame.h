@@ -33,11 +33,11 @@ public:
     SnakeGame();
 
     Position Apple_Generation();
-    void Draw();
-    void Input();
-    void Logic();
-    void Run();
-    void Name();
+    void Drawing_Function();
+    void Input_Function();
+    void Logic_Function();
+    void Run_Function();
+    void Naming_Function();
 };
 
 #endif  // SNAKEGAME_H
