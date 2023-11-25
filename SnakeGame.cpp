@@ -221,9 +221,10 @@ void SnakeGame::Naming_Function() {
     cin >> *name;
     cout << "Choose Game Difficulty by INSERTING 1,2,3 or 4:" << endl;
     cout <<"    1 for Easy," << endl;
-    cout <<"    2 for normal," << endl;
+    cout <<"    2 for Medium," << endl;
     cout <<"    3 for Hard," << endl;
-    cout <<"    4 for Pro!\n" << endl;
+    cout <<"    4 for Extreme," << endl;
+    cout <<"    5 for HELL!\n" << endl;
     cout <<"LEVEL: ";
     cin >> level;
     cout << endl;
