@@ -7,10 +7,10 @@
 #include "SnakeGame.h"
 
 
-void clearConsole();
+void Console_Clear();
 
-void drawGameBoard(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score);
-char getInput();
-void showGameOver();
+void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score);
+char Show_Input();
+void Show_Game_Over();
 
 #endif // INPUTOUTPUT_H
