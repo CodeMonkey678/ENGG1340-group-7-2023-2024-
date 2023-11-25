@@ -202,7 +202,7 @@ void SnakeGame::Run_Function() {
         if (!gameOver) {
             Logic_Function();
         }
-        this_thread::sleep_for(chrono::milliseconds(400));
+        this_thread::sleep_for(chrono::milliseconds(400/level));
     }
        
     if (gameOver) {
