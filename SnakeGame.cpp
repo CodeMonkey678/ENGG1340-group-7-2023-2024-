@@ -66,13 +66,13 @@ char getche(void) {
 SnakeGame::SnakeGame() {
     gameOver = false; // initializes the game
     head = { width / 2, height / 2 };// head position of the snake
-    apple = GenerateApple();
+    apple = Apple_Generation();
     dir = RIGHT;//initial direction of the snake
     score = 0;
     snake.push_back(head);// it adds the head position to the snake vector. Ensures that snake only have head at the beginning
 }
 
-Position SnakeGame::GenerateApple() {
+Position SnakeGame::Apple_Generation() {
     Position newApple;
     newApple.x = rand() % width;
     newApple.y = rand() % height;
@@ -178,7 +178,7 @@ void SnakeGame::Logic() {
 
     if (head.x == apple.x && head.y == apple.y) {
         score += 100;
-        apple = GenerateApple();
+        apple = Apple_Generation();
         snake.push_back(prevTail);  // Increase snake size by adding the previous tail
     } else {
         snake.pop_back();  // Remove the tail on every move
