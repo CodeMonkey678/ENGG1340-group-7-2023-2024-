@@ -59,13 +59,13 @@ void Game_Board(int width, int height, const Position& head, const Position& app
     cout << "Score: " << score << endl;
 }
 
-char Print_Input() {
+char Show_Input() {
     char input;
     cin >> input;
     return input;
 }
 
-void Game_Over() {
+void Show_Game_Over() {
     Console_Clear();
     cout << "Game over" << endl;
     cout << "Thank you for playing!" << endl;
