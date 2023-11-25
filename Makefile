@@ -9,7 +9,11 @@ SnakeGame.o: SnakeGame.cpp Snakegame.h
 InputOutput.o: InputOutput.cpp InputOutput.h SnakeGame.h
 	g++ $(FLAGS) -c $<
 
+Snake: main-2.o SnakeGame.o InputOutput.o
+	g++ $(FLAGS) $^ -o $@
 
+clean:
+	rm -f Snake SnakeGame.o InputOutput.o main-2.o
 
 clean:
   rm -f main
