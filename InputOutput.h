@@ -9,7 +9,7 @@
 
 void Console_Clear();
 
-void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score);
+void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int *score);
 char Show_Input();
 void Show_Game_Over();
 
