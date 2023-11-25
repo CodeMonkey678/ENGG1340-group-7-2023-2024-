@@ -79,7 +79,7 @@ Position SnakeGame::Apple_Generation() {
     return newApple;
 }
 
-void SnakeGame::Draw() {
+void SnakeGame::Drawing_Function() {
     // Clear the console output
     cout << "\033[2J\033[H";
 
@@ -129,7 +129,7 @@ void SnakeGame::Draw() {
     cout << "Score: " << score << endl;//print the score
 }
 
-void SnakeGame::Input() {
+void SnakeGame::Input_Function() {
     if (keyboardhit())
     {
         char input = GETCH();
@@ -152,7 +152,7 @@ void SnakeGame::Input() {
     }
 }
 
-void SnakeGame::Logic() {
+void SnakeGame::Logic_Function() {
     Position prevTail = snake.empty() ? Position{0, 0} : snake.back();
     Position prevHead = head;
     //adjust the position by add and minus the coordinate of x and y of the snake.
@@ -195,12 +195,12 @@ void SnakeGame::Logic() {
     snake.insert(snake.begin(), head);
 }
 
-void SnakeGame::Run() {
+void SnakeGame::Run_Function() {
     while (!gameOver) {
-        Draw();
-        Input();
+        Drawing_Funtion();
+        Input_Function();
         if (!gameOver) {
-            Logic();
+            Logic_Function();
         }
         this_thread::sleep_for(chrono::milliseconds(400));
     }
@@ -212,8 +212,7 @@ void SnakeGame::Run() {
         cout << "\n\n";
     }
 }
-
-void SnakeGame::Name() {
+void SnakeGame::Naming_Function() {
     string name;
     cout << "\033[2J\033[H";
     cout << "Welcome to the game" << endl;
