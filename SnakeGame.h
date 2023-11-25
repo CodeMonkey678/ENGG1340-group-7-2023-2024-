@@ -32,7 +32,7 @@ private:
 public:
     SnakeGame();
 
-    Position GenerateApple();
+    Position Apple_Generation();
     void Draw();
     void Input();
     void Logic();
