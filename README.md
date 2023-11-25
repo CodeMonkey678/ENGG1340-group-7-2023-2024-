@@ -13,7 +13,8 @@ start the game with ./snake after compiling and linking the files using "make co
 Playing the Game:
 Enter your name (without spaces)
 
-use the WASD to control the snake 
+use the WASD to control the snake, and X to quit game:
+W=UP,  S=DOWN,  A=LEFT,  D=RIGHT 
 
 Use WASD to move the playable character. The snake will keep moving in the specified direction until another direction is pressed
 
