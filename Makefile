@@ -4,7 +4,7 @@ LDFLAGS = -lncursesw
 FLAGS = -pedantic-errors -std=c++11
 OBJECTS = main-2.o SnakeGame.o InputOutput.o
 
-main-2.o: main-2.cpp SnakeGame.h InputOutput.h
+main-2.o: main.cpp SnakeGame.h InputOutput.h
 	$(CXX) $(FLAGS) -c $< -o $@
 
 SnakeGame.o: SnakeGame.cpp SnakeGame.h
