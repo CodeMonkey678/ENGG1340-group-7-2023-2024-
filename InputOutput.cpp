@@ -12,7 +12,7 @@ void Console_Clear() {
     cout << "\033[2J\033[H";
 }
 
-void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int score) {
+void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int *score) {
     Console_Clear();
 
     for (int i = 0; i < width + 2; i++) {
@@ -56,7 +56,7 @@ void Game_Board(int width, int height, const Position& head, const Position& app
     }
     cout << endl;
 
-    cout << "Score: " << score << endl;
+    cout << "Score: " << *score << endl;
 }
 
 char Show_Input() {
