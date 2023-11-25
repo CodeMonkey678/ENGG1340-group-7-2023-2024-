@@ -2,9 +2,9 @@ EXECUTABLE = snake
 CXX = g++
 LDFLAGS = -lncursesw
 FLAGS = -pedantic-errors -std=c++11
-OBJECTS = main-2.o SnakeGame.o InputOutput.o
+OBJECTS = main.o SnakeGame.o InputOutput.o
 
-main-2.o: main.cpp SnakeGame.h InputOutput.h
+main.o: main.cpp SnakeGame.h InputOutput.h
 	$(CXX) $(FLAGS) -c $< -o $@
 
 SnakeGame.o: SnakeGame.cpp SnakeGame.h
@@ -23,6 +23,7 @@ run: $(EXECUTABLE)
 	./$(EXECUTABLE)
 
 .PHONY: compile clean run
+
 
 
 
