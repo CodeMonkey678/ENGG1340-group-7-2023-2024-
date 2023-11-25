@@ -68,7 +68,7 @@ SnakeGame::SnakeGame() {
     head = { width / 2, height / 2 };// head position of the snake
     apple = Apple_Generation();
     dir = RIGHT;//initial direction of the snake
-    score = 0;
+    *score = 0;
     snake.push_back(head);// it adds the head position to the snake vector. Ensures that snake only have head at the beginning
 }
 
@@ -126,7 +126,7 @@ void SnakeGame::Drawing_Function() {
     }
     cout << endl;
 
-    cout << "Score: " << score << endl;//print the score
+    cout << "Score: " << *score << endl;//print the score
 }
 
 void SnakeGame::Input_Function() {
@@ -177,7 +177,7 @@ void SnakeGame::Logic_Function() {
     }
 
     if (head.x == apple.x && head.y == apple.y) {
-        score += 100;
+        *score += 100;
         apple = Apple_Generation();
         snake.push_back(prevTail);  // Increase snake size by adding the previous tail
     } else {
