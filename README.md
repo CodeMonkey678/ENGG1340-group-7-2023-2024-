@@ -39,9 +39,16 @@ The ultimate aim of the game is to achieve the highest score possible. Each appl
 Remember, Snake is a test of strategy, reflexes, and determination. So,eat your way to victory, embark on this thrilling adventure,and let the world witness the rise of a legendary snake master!
 Now, go forth and conquer the Snake game! 🐍🍎
 
+Compilation and execution instructions:
+Download the zip file of the game, open the file and download it onto your computer. Next save it all into a single directory and start the compilation.
+Compile the files by executing the command : make compile
+this will execute the files and combine it into an executable named snake
+Running the game: Type ./snake to run the game, and we are done.
+
 IMPLEMENTATION NOTES:
 
 list of features:
+
 
 
 DEPENDENCIES
@@ -53,7 +60,8 @@ DOCUMENTATION:
 files:
 
 
+
 A description of your game and introduce the game rules.
 A list of features that you have implemented and explain how each coding element 1 to 5 listed under the coding requirements aforementioned support your features.
-A list of non-standard C/C++ libraries, if any, that are used in your work and integrated to your code repo. Please also indicate what features in your game are supported by these libraries.
+
 Compilation and execution instructions. This serves like a "Quick start" of your game. The teaching team will follow your instructions to compile and run your game.
