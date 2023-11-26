@@ -202,15 +202,22 @@ void SnakeGame::Run_Function() {
         if (!gameOver) {
             Logic_Function();
         }
+        //400 divided by level (input from user
+        //to reduce the sleep-for time, making game more challenging
         this_thread::sleep_for(chrono::milliseconds(400/level));
     }
        
     if (gameOver) {
-        delete name; delete score;
+        
         cout << "\033[2J\033[H";
         cout << "Game over" << endl;
         cout << "Thank you for playing!" <<endl;
         cout << "\n\n";
+
+        delete name; // dynamic memory release
+        delete score; // dynamic memory release
+        name = 0;
+        score = 0;
     }
 }
 void SnakeGame::Naming_Function() {
