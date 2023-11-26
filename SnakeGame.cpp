@@ -189,11 +189,6 @@ void SnakeGame::Logic_Function() {
     for (int i = 1; i < snake.size(); i++) {
         if (head.x== snake[i].x && head.y == snake[i].y) {
             gameOver = true;
-            
-            ofstream fout("Scores.txt", ios::app);
-            fout <<*name<<": "<<*score << endl;
-            fout.close();
-            
             break;
         }
     }
