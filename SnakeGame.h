@@ -27,6 +27,8 @@ private:
     Position head;
     std::vector<Position> snake;
     Direction dir;
+    // dynamic memory for score and names
+    // integer for user-chosen level
     int *score = new int(0);
     int level = 1;
     std::string *name = new std::string;
