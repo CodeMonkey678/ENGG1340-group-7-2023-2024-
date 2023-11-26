@@ -6,9 +6,12 @@ GROUP NUMBER: group 7
 
 PROJECT DESCRIPTION: Snake Master (the snake game)
 
+Compilation and execution instructions:
+Download the zip file of the game, open the file and download it onto your computer. Next save it all into a single directory and start the compilation.
+Compile the files by executing the command : make compile
+
 Starting the game: 
 start the game with ./snake after compiling and linking the files using "make compile"
-
 
 Playing the Game:
 Enter your name (without spaces)
@@ -38,12 +41,6 @@ Rule 5: High Score Glory 🏆
 The ultimate aim of the game is to achieve the highest score possible. Each apple you devour increases your score by 100 points, showcasing your mastery of the game.Can you become the ultimate Snake champion?
 Remember, Snake is a test of strategy, reflexes, and determination. So,eat your way to victory, embark on this thrilling adventure,and let the world witness the rise of a legendary snake master!
 Now, go forth and conquer the Snake game! 🐍🍎
-
-Compilation and execution instructions:
-Download the zip file of the game, open the file and download it onto your computer. Next save it all into a single directory and start the compilation.
-Compile the files by executing the command : make compile
-this will execute the files and combine it into an executable named snake
-Running the game: Type ./snake to run the game, and we are done.
 
 IMPLEMENTATION NOTES:
 
