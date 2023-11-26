@@ -74,8 +74,8 @@ SnakeGame::SnakeGame() {
 
 Position SnakeGame::Apple_Generation() {
     Position newApple;
-    newApple.x = rand() % width;
-    newApple.y = rand() % height;
+    newApple.x = rand() % width;  //x position of the new apple generated
+    newApple.y = rand() % height; //y position of the new apple generated
     return newApple;
 }
 
@@ -221,7 +221,7 @@ void SnakeGame::Run_Function() {
     }
 }
 void SnakeGame::Naming_Function() {
-    level = 1;
+    level = 1; //Function for getting player name and choosing the level of difficulty
     cout << "\033[2J\033[H";
     cout << "Welcome to the game" << endl;
     cout << "What is your name? (no spaces)" << endl;
