@@ -69,5 +69,6 @@ void Show_Game_Over() {
     Console_Clear();
     cout << "Game over" << endl;
     cout << "Thank you for playing!" << endl;
+    cout << "Snake game by COMP2113/ENGG1340 group 7" << endl;
     cout << "\n\n";
 }
