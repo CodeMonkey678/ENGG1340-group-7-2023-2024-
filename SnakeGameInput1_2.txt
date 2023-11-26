@@ -1,0 +1,6 @@
+./main
+Andy
+3
+w
+w
+d
