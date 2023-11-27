@@ -44,9 +44,9 @@ void scorer(string name, int score){
     //now this part is called whenever the player writes his name;
     //Board.open("scoreBoard.txt", ios::app);
     if(mapping.count(name)>0){
-        cout << "Name already exists... \n";
-        cout << name << " - " << mapping[name] << endl;
-        cout << "overwrite? [Y/n]: ";
+        cout << "\nName already exists... \n";
+        cout << "\n" << name << " - " << mapping[name] << endl;
+        cout << "\noverwrite? [Y/n]: ";
         string overwrite;
         cin >> overwrite;
         if (overwrite=="Y" || overwrite == "y"){
@@ -60,19 +60,23 @@ void scorer(string name, int score){
     //now printing the entire standing
     map<string, int>::iterator itr;
     Board.open("scoreBoard.txt", ios::app);
-    cout << "\nSTATS:\n";
+    cout << "\n" << "\nSTATS:\n";
     for(itr=mapping.begin(); itr != mapping.end(); itr++){
         cout << (*itr).first << " - " << (*itr).second << endl;
         Board << (*itr).first << " " << (*itr).second << endl;
+        
     }
+    cout << endl;
+    
     Board.close();
     string reset;
 
-    cout << "\nRESET ALL DATA? [Y/n]: ";
+    cout << "\nWOULD YOU LIKE TO ERASE ALL STATS DATA? [Y/n]: ";
     cin >> reset;
     if (reset=="Y" || reset == "y"){
             Board.open("scoreBoard.txt");
             Board.close();
+            cout << "\n";
             cout << "\nData reset!" << endl;
         }
 }
