@@ -132,6 +132,7 @@ void SnakeGame::Drawing_Function() {
     cout << endl;
     cout << *name << " - ";//count the name of the player
     cout << "Score: " << *score << endl;//print the score of the player
+    cout << "Level: " << level << endl;
 }
 //this is to get the user input from the keyboard, to move the snake
 void SnakeGame::Input_Function() {
@@ -247,10 +248,16 @@ void SnakeGame::Naming_Function() {
     
     if (level > 6){ // checking for valid input of level
         cout << "level beyond 6 is Locked, level 6 selected by default." << endl;
+        string gotIt;
+        cout << "press any letter to continue: "; cin >> gotIt;
+        cout << endl;
         level = 6;
     }
     if (level < 1) { // further checking for valid input of level
         cout << "No level below 1 exists! Level 1 selected by default." << endl;
+        string gotIt;
+        cout << "press any letter to continue: "; cin >> gotIt;
+        cout << endl;
         level = 1;
     }
     
