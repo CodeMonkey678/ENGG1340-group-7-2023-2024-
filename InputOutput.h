@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include "SnakeGame.h"
-
+//this is just a  output head file
 
 void Console_Clear();
 
