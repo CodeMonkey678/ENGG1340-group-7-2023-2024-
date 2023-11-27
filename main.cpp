@@ -1,12 +1,13 @@
 #include <iostream>
-#include "SnakeGame.h"
-#include "InputOutput.h"
+#include "SnakeGame.h"//include the snake game header file, to run the functions
+#include "InputOutput.h"//include the input output header file to run the functions
 using namespace std;
 //this is the main file to run the snake game
 int main() {
-    srand(static_cast<unsigned>(time(nullptr)));
+    //random function
+    srand(static_cast<unsigned>(time(nullptr)));//it is to seed the random number generator with the current time.
 
-    SnakeGame game;
+    SnakeGame game;//a snakegame class called game is created
     game.Naming_Function();
     game.Run_Function();
 
