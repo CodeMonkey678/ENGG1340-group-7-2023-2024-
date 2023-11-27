@@ -159,7 +159,7 @@ void SnakeGame::Input_Function() {
 void SnakeGame::Logic_Function() {
     Position prevTail = snake.empty() ? Position{0, 0} : snake.back();
     Position prevHead = head;
-    //adjust the position by add and minus the coordinate of x and y of the snake.
+    //adjust the position by add and minus the coordinate of x and y of the snake. (x,y) coordinate
     switch (dir) {
         case UP:
             head.y--;
@@ -182,7 +182,7 @@ void SnakeGame::Logic_Function() {
 
     if (head.x == apple.x && head.y == apple.y) {
         *score += 100;
-        apple = Apple_Generation();
+        apple = Apple_Generation();//apple is generated randomly
         snake.push_back(prevTail);  // Increase snake size by adding the previous tail
     } else {
         snake.pop_back();  // Remove the tail on every move
@@ -191,7 +191,7 @@ void SnakeGame::Logic_Function() {
     // Check for collision with snake body
     for (int i = 1; i < snake.size(); i++) {
         if (head.x== snake[i].x && head.y == snake[i].y) {
-            gameOver = true;
+            gameOver = true;//is is gameover condition
             break;
         }
     }
@@ -214,13 +214,13 @@ void SnakeGame::Run_Function() {
     if (gameOver) {
         //print out the game over page
         cout << "\033[2J\033[H";
-        cout << "Game over" << endl;
+        cout << "Game over" << endl;//display the gameover message
         cout << "Thank you for playing!" <<endl;
         cout << "\n\n";
 
         delete name; // dynamic memory release
         delete score; // dynamic memory release
-        name = 0;
+        name = 0;//initialize the score and name
         score = 0;
     }
 }
