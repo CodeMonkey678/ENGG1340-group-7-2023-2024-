@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include <istream>
+#include <sstream>
 
 // Function declaration for the scorer function
 void scorer(std::string name, int score);
