@@ -13,7 +13,7 @@
 using namespace std;
 
 static struct termios old, newer;
-
+//this is the snake game c++ file
 void initializeTermios(int echo) {
     //Gets the current terminal attributes from the file descriptor 0 (standard input) and stores them in struct old.
     tcgetattr(0, &old);
