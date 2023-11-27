@@ -9,9 +9,9 @@ using namespace std;
 
 
 void Console_Clear() {
-    cout << "\033[2J\033[H";
+    cout << "\033[2J\033[H";//it can use to clear the console screen, so weird
 }
-
+// this function is used to draw the game board, including snake, apple and score
 void Game_Board(int width, int height, const Position& head, const Position& apple, const std::vector<Position>& snake, int *score) {
     Console_Clear();
 
@@ -19,17 +19,17 @@ void Game_Board(int width, int height, const Position& head, const Position& app
         cout << "#";
     }
     std::cout << std::endl;
-
+//using for loop to print out the snake body, head and apple on the screen
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0) {
-                cout << "#";
+                cout << "#";//this is to draw the snake's body, when the condition is satisfied
             }
             if (i == head.y && j == head.x) {
-                cout << "O";
+                cout << "O";//this is to draw the snake's head
             }
             else if (i == apple.y && j == apple.x) {
-                cout << "A";
+                cout << "A";//print out the apple on the screen
             }
             else {
                 bool isBodyPart = false;
@@ -56,19 +56,19 @@ void Game_Board(int width, int height, const Position& head, const Position& app
     }
     cout << endl;
 
-    cout << "Score: " << *score << endl;
+    cout << "Score: " << *score << endl;//count the score of player
 }
 
 char Show_Input() {
     char input;
-    cin >> input;
-    return input;
+    cin >> input;//get the input
+    return input;//return the input character
 }
 
 void Show_Game_Over() {
     Console_Clear();
     cout << "Game over" << endl;
-    cout << "Thank you for playing!" << endl;
-    cout << "Snake game by COMP2113/ENGG1340 group 7" << endl;
+    cout << "Thank you for playing!" << endl;//end of the game
+    cout << "Snake game by COMP2113/ENGG1340 group 7" << endl;//nice team
     cout << "\n\n";
 }
