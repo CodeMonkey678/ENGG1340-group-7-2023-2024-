@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-
+//this is a snake game head file
 struct Position {
     int x;
     int y;
