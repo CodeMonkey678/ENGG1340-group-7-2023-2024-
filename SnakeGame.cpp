@@ -26,6 +26,7 @@ void initializeTermios(int echo) {
     tcsetattr(0, TCSANOW, &newer);
 }
 
+// this function to check if there is any keyboard input waiting to be read
 bool keyboardhit() {
     termios term;
     //tcgetattr is called to get the current terminal attributes for file descriptor 0
@@ -37,7 +38,7 @@ bool keyboardhit() {
 
     int byteswaiting;
     //called the ioctl function to determine how many bytes are waiting in the input buffer.
-    ioctl(0, FIONREAD, &byteswaiting);
+    ioctl(0, FIONREAD, &byteswaiting);//it is an input buffer
 
     tcsetattr(0, TCSANOW, &term);
 
@@ -45,6 +46,7 @@ bool keyboardhit() {
 }
 
 void resetTermios(void) {
+    // this function restores the original terminal attributes
     tcsetattr(0, TCSANOW, &old);
 }
 
@@ -57,13 +59,14 @@ char getch_(int echo) {
 }
 
 char GETCH(void) {
+    //this allows you to read a character from the keyboard without echo
     return getch_(0);
 }
 
 char getche(void) {
-    return getch_(1);
+    return getch_(1);//similar, but with echo the character to the console
 }
-
+// this is the SnakeGame class
 SnakeGame::SnakeGame() {
     gameOver = false; // initializes the game
     head = { width / 2, height / 2 };// head position of the snake
@@ -82,7 +85,7 @@ Position SnakeGame::Apple_Generation() {
 
 void SnakeGame::Drawing_Function() {
     // Clear the console output
-    cout << "\033[2J\033[H";
+    cout << "\033[2J\033[H";// kind of weird??
 
     for (int i = 0; i < width + 2; i++) {
         cout << "#";//print out the gameboard
@@ -112,43 +115,43 @@ void SnakeGame::Drawing_Function() {
                     }
                 }
                 if (!isBodyPart) {
-                    cout << " ";
+                    cout << " ";//cout it if it is not the body part of the snake
                 }
             }
             if (j == width - 1) {
                 cout << "#";
             }
         }
-        cout << endl;
+        cout << endl;//change the line
     }
 
     for (int i = 0; i < width + 2; i++) {
         cout << "#";
     }
     cout << endl;
-    cout << *name << " - ";
-    cout << "Score: " << *score << endl;//print the score
+    cout << *name << " - ";//count the name of the player
+    cout << "Score: " << *score << endl;//print the score of the player
 }
-
+//this is to get the user input from the keyboard, to move the snake
 void SnakeGame::Input_Function() {
     if (keyboardhit())
     {
         char input = GETCH();
             
         if ((input == 'w' || input == 'W') && dir != DOWN) {
-            dir = UP;
+            dir = UP;//w is go up
         }
         else if ((input == 's' || input == 'S') && dir != UP) {
-            dir = DOWN;
+            dir = DOWN;//s is go down
         }
         else if ((input == 'a' || input == 'A') && dir != RIGHT) {
-            dir = LEFT;
+            dir = LEFT;//a is go left
         }
         else if ((input == 'd' || input == 'D') && dir != LEFT) {
-            dir = RIGHT;
+            dir = RIGHT;//d is go right
         }
         else if (input == 'x' || input == 'X') {
-            gameOver = true;
+            gameOver = true;//x can quit the game
         }
     }
 }
@@ -209,7 +212,7 @@ void SnakeGame::Run_Function() {
     }
        
     if (gameOver) {
-        
+        //print out the game over page
         cout << "\033[2J\033[H";
         cout << "Game over" << endl;
         cout << "Thank you for playing!" <<endl;
@@ -226,7 +229,8 @@ void SnakeGame::Naming_Function() {
     cout << "\033[2J\033[H";//this line is used to clear the screen
     cout << "Welcome to the game" << endl;
     cout << "What is your name? (no spaces)" << endl;
-    cin >> *name;
+    cin >> *name;//get the user's name
+    //print out the starting page of the game
     cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
     cout <<"    1 for Easy," << endl;
     cout <<"    2 for Medium," << endl;
