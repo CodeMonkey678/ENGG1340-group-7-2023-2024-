@@ -1,4 +1,5 @@
 #include "SnakeGame.h"
+#include "scoring.h"
 //provide the header files that can generate the random numbers, game speed, I/O handling, read and write to files
 #include <cstdlib>
 #include <ctime>
@@ -212,6 +213,9 @@ void SnakeGame::Run_Function() {
     }
        
     if (gameOver) {
+        //call the scorer function
+        string Name=*name; int Score=*score;
+        scorer(Name, Score);
         //print out the game over page
         cout << "\033[2J\033[H";
         cout << "Game over" << endl;//display the gameover message
