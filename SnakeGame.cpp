@@ -232,7 +232,7 @@ void SnakeGame::Naming_Function() {
     level = 1; //Function for getting player name and choosing the level of difficulty
     cout << "\033[2J\033[H";//this line is used to clear the screen
     cout << "Welcome to the game" << endl;
-    cout << "What is your name? (no spaces)" << endl;
+    cout << "What is your name? (no spaces, case-sensitive)" << endl;
     cin >> *name;//get the user's name
     //print out the starting page of the game
     cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
@@ -244,6 +244,16 @@ void SnakeGame::Naming_Function() {
     cout <<"    6 for HELL!\n" << endl;
     cout <<"LEVEL: ";
     cin >> level;
+    
+    if (level > 6){ // checking for valid input of level
+        cout << "level beyond 6 is Locked, level 6 selected by default." << endl;
+        level = 6;
+    }
+    if (level < 1) { // further checking for valid input of level
+        cout << "No level below 1 exists! Level 1 selected by default." << endl;
+        level = 1;
+    }
+    
     cout << endl;
             
     cout << "\033[2J\033[H";
