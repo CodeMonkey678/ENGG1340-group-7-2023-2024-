@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include <istream>
+#include <sstream>
 using namespace std;
 
 void scorer(string name, int score){
