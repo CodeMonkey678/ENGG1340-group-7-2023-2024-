@@ -1,3 +1,4 @@
+#include "scoring.h"
 #include <map>
 #include <iostream>
 #include <fstream>
