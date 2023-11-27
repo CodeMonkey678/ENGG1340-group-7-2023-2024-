@@ -1,5 +1,5 @@
 #include "SnakeGame.h"
-
+//provide the header files that can generate the random numbers, game speed, I/O handling, read and write to files
 #include <cstdlib>
 #include <ctime>
 #include <thread>
