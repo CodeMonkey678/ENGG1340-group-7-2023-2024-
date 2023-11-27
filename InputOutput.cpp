@@ -16,7 +16,7 @@ void Game_Board(int width, int height, const Position& head, const Position& app
     Console_Clear();
 
     for (int i = 0; i < width + 2; i++) {
-        cout << "#";
+        cout << "#";// this can print out the body of the snake
     }
     std::cout << std::endl;
 //using for loop to print out the snake body, head and apple on the screen
@@ -35,24 +35,24 @@ void Game_Board(int width, int height, const Position& head, const Position& app
                 bool isBodyPart = false;
                 for (int k = 1; k < snake.size(); k++) {
                     if (snake[k].x == j && snake[k].y == i) {
-                        cout << "o";
+                        cout << "o";//it is print the head
                         isBodyPart = true;
                         break;
                     }
                 }
                 if (!isBodyPart) {
-                    cout << " ";
+                    cout << " ";//if not a body, not a head, not an apple, then print nothing
                 }
             }
             if (j == width - 1) {
-                cout << "#";
+                cout << "#";//print the body
             }
         }
         cout << endl;
     }
 
     for (int i = 0; i < width + 2; i++) {
-        cout << "#";
+        cout << "#";// print the body!!
     }
     cout << endl;
 
