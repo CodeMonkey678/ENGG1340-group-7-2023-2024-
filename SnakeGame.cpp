@@ -1,5 +1,6 @@
 #include "SnakeGame.h"
 #include "scoring.h"
+#include "levels.h"
 //provide the header files that can generate the random numbers, game speed, I/O handling, read and write to files
 #include <cstdlib>
 #include <ctime>
@@ -236,31 +237,10 @@ void SnakeGame::Naming_Function() {
     cout << "What is your name? (no spaces, case-sensitive)" << endl;
     cin >> *name;//get the user's name
     //print out the starting page of the game
-    cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
-    cout <<"    1 for Easy," << endl;
-    cout <<"    2 for Medium," << endl;
-    cout <<"    3 for Hard," << endl;
-    cout <<"    4 for Extreme," << endl;
-    cout <<"    5 for Nightmare," << endl;
-    cout <<"    6 for HELL!\n" << endl;
-    cout <<"LEVEL: ";
-    cin >> level;
     
-    if (level > 6){ // checking for valid input of level
-        cout << "level beyond 6 is Locked, level 6 selected by default." << endl;
-        string gotIt;
-        cout << "press any letter, then ENTER to continue: "; cin >> gotIt;
-        cout << endl;
-        level = 6;
-    }
-    if (level < 1) { // further checking for valid input of level
-        cout << "No level below 1 exists! Level 1 selected by default." << endl;
-        string gotIt;
-        cout << "press any letter, then ENTER to continue: "; cin >> gotIt;
-        cout << endl;
-        level = 1;
-    }
-    
+    string Namee = *name;
+    level = levels(Namee);
+   
     cout << endl;
             
     cout << "\033[2J\033[H";
