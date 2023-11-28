@@ -2,6 +2,7 @@
 #include "SnakeGame.h"//include the snake game header file, to run the functions
 #include "InputOutput.h"//include the input output header file to run the functions
 #include "scoring.h" // specifically for storing the scores
+#include "levels.h"
 using namespace std;
 //this is the main file to run the snake game
 int main() {
