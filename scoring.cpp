@@ -32,11 +32,11 @@ void scorer(string name, int score){
         istringstream iss(line);
         //traversing through the single line below
         while(iss>>word){
-            if(!mapping.count(word)){
-                while(iss>>nameScore){
-                    mapping[word]=nameScore;
+            //if(!mapping.count(word)){
+            while(iss>>nameScore){
+                mapping[word]=nameScore;
                 }
-            }
+            //}
         }
     }
     writer.close();
@@ -50,8 +50,8 @@ void scorer(string name, int score){
         string overwrite;
         cin >> overwrite;
         if (overwrite=="Y" || overwrite == "y"){
-            nameScore = score; // Update nameScore variable
-            mapping[name] = nameScore; // Update mapping[name] with nameScore
+            //nameScore = score; // Update nameScore variable
+            mapping[name] = score; // Update mapping[name] with nameScore
             cout << "\nOverwritten!" << endl;
         }
     } else {
