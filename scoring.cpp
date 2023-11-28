@@ -60,11 +60,12 @@ void scorer(string name, int score){
 
     //now printing the entire standing
     map<string, int>::iterator itr;
-    Board.open("scoreBoard.txt", ios::app);
+    Board.open("scoreBoard.txt");
     cout << "\n" << "\nSTATS:\n";
     for(itr=mapping.begin(); itr != mapping.end(); itr++){
+        Board << (*itr).first << "  " << (*itr).second << "\n";
         cout << (*itr).first << " - " << (*itr).second << endl;
-        Board << (*itr).first << " " << (*itr).second << endl;
+        
         
     }
     cout << endl;
