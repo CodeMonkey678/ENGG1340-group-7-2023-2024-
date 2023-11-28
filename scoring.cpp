@@ -50,7 +50,8 @@ void scorer(string name, int score){
         string overwrite;
         cin >> overwrite;
         if (overwrite=="Y" || overwrite == "y"){
-            mapping[name] = score;
+            nameScore = score; // Update nameScore variable
+            mapping[name] = nameScore; // Update mapping[name] with nameScore
             cout << "\nOverwritten!" << endl;
         }
     } else {
