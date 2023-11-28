@@ -45,8 +45,8 @@ void scorer(string name, int score){
     //Board.open("scoreBoard.txt", ios::app);
     if(mapping.count(name)>0){
         cout << "\nName already exists... \n";
-        cout << "\n" << name << " - " << mapping[name] << endl;
-        cout << "\noverwrite? [Y/n]: ";
+        cout << "\n Previous score: " << name << " - " << mapping[name] << endl;
+        cout << "\noverwrite with new score("<<score<<")? [Y/n]: ";
         string overwrite;
         cin >> overwrite;
         if (overwrite=="Y" || overwrite == "y"){
