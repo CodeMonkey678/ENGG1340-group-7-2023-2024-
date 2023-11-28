@@ -22,7 +22,7 @@ W=UP,  S=DOWN,  A=LEFT,  D=RIGHT
 Use WASD to move the playable character. The snake will keep moving in the specified direction until another direction is pressed
 
 Game rules:
-Welcome to the thrilling world of Snake! In this game, you'll embark on an epic adventure as a snake. Your goal? To grow bigger and stronger by gobbling up tasty treats and avoiding your own tail and the treacherous walls that surround you.
+Welcome to the thrilling world of Snake! In this game, you'll embark on an epic adventure as a snake. Your goal? To grow bigger and stronger by gobbling up tasty apples and avoiding your own tail and the treacherous walls that surround you.
 As you slither through the pixelated landscape, keep these rules in mind:
 
 Rule 1: Devour Treats 🍎
