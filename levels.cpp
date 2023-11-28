@@ -44,7 +44,7 @@ int levels(string name){
 
     if(leveling.count(name)>0){
         cout << "\nWELCOME BACK, " << name << "!!!" << endl;
-        if(leveling[name]>=1000){
+        if((leveling[name]) > 950){
             // ALL LEVELS UNLOCKED! RETURN ANY DESIRABLE LEVEL
                 cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
                 cout <<"    1 for Easy," << endl;
