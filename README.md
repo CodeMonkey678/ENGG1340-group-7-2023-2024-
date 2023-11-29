@@ -4,7 +4,8 @@ GROUP MEMBERS:
   TSE Wang Pok (UID: 3036065642), 
   TAMANG PALDEN (UID: 3036106240), 
   Ho Chun Kau (UID: 3036068876) , 
-  CHANDAFA Abraham Ernest (UID: 3036030958)
+  CHANDAFA Abraham Ernest (UID: 3036030958),
+  
 
 GROUP NUMBER: group 7
 
@@ -60,18 +61,14 @@ interactive main menu
 variety of levels with a range of difficulties
 
 
-
-
-
 DEPENDENCIES
-
 require ncurses to render the game ncurses is used to draw all charcters at (y,x) coordinates only. ncurses on server is used.
 
 DOCUMENTATION:
 
 files:
 
-
+QUICKSTART: 
 
 Code Requirement. Your implementation should include all the following coding elements: Generation of random game sets or events
 Data structures for storing game status
