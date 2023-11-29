@@ -62,6 +62,7 @@ Now, go forth and conquer the Snake game! 🐍🍎
 IMPLEMENTATION NOTES:
 
 list of features:
+
 extensive use of dynamic memory
 
 used pointers to keep track of all dynamic objects
