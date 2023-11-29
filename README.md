@@ -118,13 +118,16 @@ main.cpp
 
 Main file to run the snake game,and where the snakegame class called game is created.
 
+
 InputOutput.cpp InputOutput.h
 
 Contains functions to draw the game board, including snake, apple and score, and is used to show the game over message.
 
+
 SnakeGame.cpp SnakeGame.h
 
 This is the main file containing the logic of the game. Contains functions to read real time player keyboard input and contains functions to generate tha apple in random positions and conditions for game over.
+
 
 levels.cpp levels.h
 
@@ -134,9 +137,11 @@ function checks to see if level chosen is valid
 Prints out messages to interact with user, then finally returns an integer
 which is used for determining game difficulty
 
+
 scoring.cpp scoring.h
 
 Uses maps to store all data efficiently before printing to user & storing to file, function takes name and new score after game over, returns nothing.
+
 
 Makefile
 
