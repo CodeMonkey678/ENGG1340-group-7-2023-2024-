@@ -49,6 +49,17 @@ Now, go forth and conquer the Snake game! 🐍🍎
 IMPLEMENTATION NOTES:
 
 list of features:
+extensive use of dynamic memory
+used pointers to keep track of all dynamic objects
+randomised apple generaton
+realtime input output
+saved score under player inputted name
+scores are saved to a separate textfile named scoreBoard.txt
+utilised multiple STL containers
+interactive main menu
+variety of levels with a range of difficulties
+
+
 
 
 
