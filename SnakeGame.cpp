@@ -216,8 +216,9 @@ void SnakeGame::Run_Function() {
        
     if (gameOver) {
         //call the scorer function
-        string Name=*name; int Score=*score;
-        scorer(Name, Score);
+        string Name=*name; 
+        int Score=*score;
+        scorer(Name, Score); // deals with data storage etc. more info on scoring.cpp
         //print out the game over page
         cout << "\033[2J\033[H";
         cout << "Game over" << endl;//display the gameover message
@@ -227,19 +228,18 @@ void SnakeGame::Run_Function() {
         delete name; // dynamic memory release
         delete score; // dynamic memory release
         name = 0;//initialize the score and name
-        score = 0;
+        score = 0; // initialize them to nullptr
     }
 }
 void SnakeGame::Naming_Function() {
-    level = 1; //Function for getting player name and choosing the level of difficulty
+    level = 1; 
     cout << "\033[2J\033[H";//this line is used to clear the screen
     cout << "Welcome to the game" << endl;
     cout << "What is your name? (no spaces, case-sensitive)" << endl;
     cin >> *name;//get the user's name
-    //print out the starting page of the game
     
     string Namee = *name;
-    level = levels(Namee);
+    level = levels(Namee);//from Function for getting player name and choosing the level of difficulty
    
     cout << endl;
             
