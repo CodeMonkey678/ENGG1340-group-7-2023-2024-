@@ -97,7 +97,7 @@ Finally, the function returns the newApple position.
 
 
 Data structures for storing game status:
-Utilized a wide range of data structures, such as vectors, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
+Utilized a wide range of data structures, such as dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
 
 Dynamic memory management:
 Dynamic String Allocation: In the case where the user input is invalid (level greater than 4 or less than 1), dynamic memory allocation is used to create a new string object gotIt. This string is used to inform the user of the invalid input and measures taken. For example: string *gotIt = new string;.
