@@ -13,7 +13,7 @@ GROUP NUMBER: group 7
 PROJECT DESCRIPTION: Snake Master (the snake game)
 
 Compilation and execution instructions:
-Download the zip file of the game, open the file and download it onto your computer. Next save it all into a single directory and start the compilation.
+Download the zip file of the game, open the file and download it onto your computer. Next, save it all into a single directory and start the compilation.
 Compile the files by executing the command : make compile
 
 Starting the game: 
@@ -58,11 +58,11 @@ Rule 3: Avoid Walls 🧱
 The game arena is surrounded by solid walls. Crashing your snake into these barriers is game over. You must skillfully maneuver your snake through the ever-narrowing gaps as the walls close in.Be agile and use those reflexes to survive.
 
 Rule 4: Speed and Precision ⚡️
-Snake, like life, moves fast! You'll need lightning-fast reflexes to guide your snake around the obstacles and towards victory. Be precise in your movements, as a single wrong turn can cost you dearly.Depending on which level you choose, the pace of the game will be faster.
+Snake, like life, moves fast! You'll need lightning-fast reflexes to guide your snake around the obstacles and towards victory. Be precise in your movements, as a single wrong turn can cost you dearly. Depending on which level you choose, the pace of the game will be faster.
 
 Rule 5: High Score Glory 🏆
-The ultimate aim of the game is to achieve the highest score possible. Each apple you devour increases your score by 100 points, showcasing your mastery of the game.Can you become the ultimate Snake champion?
-Remember, Snake is a test of strategy, reflexes, and determination. So,eat your way to victory, embark on this thrilling adventure,and let the world witness the rise of a legendary snake master!
+The ultimate aim of the game is to achieve the highest score possible. Each apple you devour increases your score by 100 points, showcasing your mastery of the game. Can you become the ultimate Snake champion?
+Remember, Snake is a test of strategy, reflexes, and determination. So, eat your way to victory, embark on this thrilling adventure, and let the world witness the rise of a legendary snake master!
 Now, go forth and conquer the Snake game! 🐍🍎
 
 IMPLEMENTATION NOTES:
@@ -73,7 +73,7 @@ extensive use of dynamic memory
 
 used pointers to keep track of all dynamic objects
 
-randomised apple generaton
+randomised apple generation
 
 realtime input output
 
