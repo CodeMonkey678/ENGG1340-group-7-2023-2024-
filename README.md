@@ -82,6 +82,7 @@ interactive main menu
 variety of levels with a range of difficulties
 
 Generation of random game sets or events:
+
 Generation of random position for an apple within the game board, using the rand() function to generate random coordinates for x and y. The resulting position is returned.
 Member called Apple_Generation() within a class named SnakeGame. This function is responsible for generating a new apple position within the game board.
 The function starts by declaring a variable called newApple of type Position.
@@ -91,20 +92,25 @@ Finally, the function returns the newApple position.
 
 
 Data structures for storing game status:
+
 Utilized a wide range of data structures, such as vectors, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
 
 Dynamic memory management:
 
 File input/output (e.g., for loading/saving game status):
+
 scoring.cpp opens a file named "scoreBoard.txt" to store game scores. It reads existing scores from the file and stores them in a map called mapping. New scores are added to the map. The updated scores are written back to the file, and the current standings are displayed to the user. The file is closed after the operations are completed.
 
 Program codes in multiple files:
+
 The game has been implemented using multiple files to organize and separate different components of the game. Each file focuses on a specific aspect of the game, such as the game logic, user input, and scoring etc. This allows for better code organization, reusability, and maintainability. By dividing the code into multiple files, it becomes easier to manage and work on individual components independently while ensuring proper integration between them.
 
 Proper indentation and naming styles:
+
 All code blocks are indented with appropriate spacing. All functions, classes and variables are named appropriately with easy to understand names, relating to its purpose
 
 In-code documentation:
+
 Consistent use of in code documentation in all files, describing the purpose of the function and what it does.
 
 
