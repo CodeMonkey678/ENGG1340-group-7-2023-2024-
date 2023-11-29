@@ -60,6 +60,24 @@ utilised multiple STL containers
 interactive main menu
 variety of levels with a range of difficulties
 
+Generation of random game sets or events:
+Apple
+
+Data structures for storing game status:
+Utilized a wide range of data structures, such as vectors, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
+
+Dynamic memory management:
+
+File input/output (e.g., for loading/saving game status):
+
+Program codes in multiple files:
+
+Proper indentation and naming styles:
+
+In-code documentation:
+Consistent use of in code documentation in all files, describing the purpose of the function and what it does.
+
+
 
 DEPENDENCIES
 require ncurses to render the game ncurses is used to draw all charcters at (y,x) coordinates only. ncurses on server is used.
