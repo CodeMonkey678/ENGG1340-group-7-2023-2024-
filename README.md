@@ -102,14 +102,10 @@ Program codes in multiple files:
 The game has been implemented using multiple files to organize and separate different components of the game. Each file focuses on a specific aspect of the game, such as the game logic, user input, and scoring etc. This allows for better code organization, reusability, and maintainability. By dividing the code into multiple files, it becomes easier to manage and work on individual components independently while ensuring proper integration between them.
 
 Proper indentation and naming styles:
+All code blocks are indented with appropriate spacing. All functions, classes and variables are named appropriately with easy to understand names, relating to its purpose
 
 In-code documentation:
 Consistent use of in code documentation in all files, describing the purpose of the function and what it does.
-
-
-
-DEPENDENCIES
-require ncurses to render the game ncurses is used to draw all charcters at (y,x) coordinates only. ncurses on server is used.
 
 
 FILES:
