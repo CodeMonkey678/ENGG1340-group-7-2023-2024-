@@ -22,6 +22,16 @@ Playing the Game:
 Enter your name (without spaces)
 Choose a level from 1-6
 
+Level descriptions:
+1 for Easy
+2 for Medium
+3 for Hard
+4 for Extreme
+5 for Nightmare
+6 for HELL!
+
+The higher the level, the faster the snake moves, the faster the pace of the game is
+
 use the WASD to control the snake, and X to quit game:
 W=UP,  S=DOWN,  A=LEFT,  D=RIGHT 
 
