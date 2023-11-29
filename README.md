@@ -74,6 +74,11 @@ variety of levels with a range of difficulties
 
 Generation of random game sets or events:
 Generation of random position for an apple within the game board, using the rand() function to generate random coordinates for x and y. The resulting position is returned.
+Member called Apple_Generation() within a class named SnakeGame. This function is responsible for generating a new apple position within the game board.
+The function starts by declaring a variable called newApple of type Position.
+Next, the x coordinate of the newApple position is set to a random value between 0 and width - 1. This is achieved by using the modulo operator % with the rand() function, which generates a random number.
+Similarly, the y coordinate of the newApple position is set to a random value between 0 and height - 1 using the same approach.
+Finally, the function returns the newApple position.
 
 
 Data structures for storing game status:
