@@ -94,9 +94,31 @@ Consistent use of in code documentation in all files, describing the purpose of 
 DEPENDENCIES
 require ncurses to render the game ncurses is used to draw all charcters at (y,x) coordinates only. ncurses on server is used.
 
-DOCUMENTATION:
 
-files:
+FILES:
+
+main.cpp
+Main file to run the snake game,and where the snakegame class called game is created.
+
+InputOutput.cpp InputOutput.h
+Contains functions to draw the game board, including snake, apple and score, and is used to show the game over message.
+
+SnakeGame.cpp SnakeGame.h
+This is the main file containing the logic of the game. Contains functions to read real time player keyboard input and contains functions to generate tha apple in random positions and conditions for game over.
+
+levels.cpp levels.h
+Contains the level function which takes user name, checks to see if it is first time or existing, if first time, function welcomes user, introduces him to which levels they can choose
+Otherwise, it checks previous score to determine which levels can be selected
+function checks to see if level chosen is valid
+Prints out messages to interact with user, then finally returns an integer
+which is used for determining game difficulty
+
+scoring.cpp scoring.h
+Uses maps to store all data efficiently before printing to user & storing to file, function takes name and new score after game over, returns nothing.
+
+Makefile
+Used to compile and build the game. The Makefile defines compilation rules for each source file, specifying dependencies and commands to generate object files. The "compile" target compiles the source files into object files and links them to create the "snake" executable. The "clean" target removes generated files, ensuring a clean build environment. The "run" target executes the "snake" program.
 
 QUICKSTART: 
+
 
