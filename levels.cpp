@@ -126,17 +126,21 @@ int levels(string name){
 
         if (level > 4){ // checking for valid input of level
             cout << "reach above 1000 points to unlock level 5 and 6. level 4 selected by default." << endl;
-            string gotIt;
-            cout << "press any letter, then ENTER to continue: "; cin >> gotIt;
+            string *gotIt = new string; // is used to inform user of invalid input, and measures employed
+            cout << "press any letter, then ENTER to continue: "; cin >> *gotIt;
             cout << endl;
             level = 4;
+            delete gotIt; gotIt = 0; // served it's purpose already
+            
         }
         if (level < 1) { // further checking for valid input of level
             cout << "No level below 1 exists! Level 1 selected by default." << endl;
-            string gotIt;
-            cout << "press any letter, then ENTER to continue: "; cin >> gotIt;
+            string *gotIt = new string; //is used to inform user of invalid input, and measures employed
+            cout << "press any letter, then ENTER to continue: "; cin >> *gotIt;
             cout << endl;
             level = 1;
+            delete gotIt; gotIt = 0; // served it's purpose already
+            
         }
             return level;
     }
