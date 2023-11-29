@@ -119,6 +119,6 @@ Uses maps to store all data efficiently before printing to user & storing to fil
 Makefile
 Used to compile and build the game. The Makefile defines compilation rules for each source file, specifying dependencies and commands to generate object files. The "compile" target compiles the source files into object files and links them to create the "snake" executable. The "clean" target removes generated files, ensuring a clean build environment. The "run" target executes the "snake" program.
 
-QUICKSTART: 
+
 
 
