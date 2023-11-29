@@ -73,7 +73,8 @@ interactive main menu
 variety of levels with a range of difficulties
 
 Generation of random game sets or events:
-Apple
+Generation of random position for an apple within the game board, using the rand() function to generate random coordinates for x and y. The resulting position is returned.
+
 
 Data structures for storing game status:
 Utilized a wide range of data structures, such as vectors, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
