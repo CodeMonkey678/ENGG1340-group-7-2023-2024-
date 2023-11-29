@@ -99,10 +99,3 @@ files:
 
 QUICKSTART: 
 
-Code Requirement. Your implementation should include all the following coding elements: Generation of random game sets or events
-Data structures for storing game status
-Dynamic memory management
-File input/output (e.g., for loading/saving game status) Program codes in multiple files
-Proper indentation and naming styles
-In-code documentation
-
