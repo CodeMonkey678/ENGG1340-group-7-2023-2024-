@@ -51,10 +51,10 @@ void scorer(string name, int score){
         cout << "\nName already exists... \n";
         cout << "\n Previous score: " << name << " - " << mapping[name] << endl;
         cout << "\noverwrite with new score("<<score<<")? [Y/n]: ";
-        string *overwrite = new string;
+        char* overwrite = new char;
         cin >> *overwrite;
         
-        if (*overwrite=="Y" || *overwrite == "y"){
+        if (*overwrite=='Y' || *overwrite == 'y'){
             //nameScore = score; // Update nameScore variable
             mapping[name] = score; // Update mapping[name] with nameScore
             cout << "\nOverwritten!" << endl;      
@@ -77,11 +77,11 @@ void scorer(string name, int score){
     cout << endl;
     
     Board.close();
-    string *reset = new string;
+    char* reset = new char;
 
     cout << "\nWOULD YOU LIKE TO ERASE ALL STATS DATA? [Y/n]: "; //asks whether restart the stats
     cin >> *reset;
-    if (*reset=="Y" || *reset == "y"){
+    if (*reset=='Y' || *reset == 'y'){
             Board.open("scoreBoard.txt");
             Board.close();
             cout << "\n";
