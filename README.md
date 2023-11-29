@@ -17,7 +17,7 @@ Download the zip file of the game, open the file and download it onto your compu
 Compile the files by executing the command : make compile
 
 Starting the game: 
-start the game with ./snake after compiling and linking the files using "make compile"
+start the game by running ./snake after compiling and linking the files using the command "make compile"
 
 Playing the Game:
 Enter your name (without spaces)
@@ -81,7 +81,7 @@ saved score under player inputted name
 
 scores are saved to a separate textfile named scoreBoard.txt
 
-utilised multiple STL containers
+utilised multiple STL containers with corresponding iterators
 
 interactive main menu
 
@@ -97,7 +97,7 @@ Finally, the function returns the newApple position.
 
 
 Data structures for storing game status:
-Utilized a wide range of data structures, such as vectors, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
+Utilized a wide range of data structures, such as vectors, maps, dynamically allocated arrays, strings, and integers. Pointers are also extensively employed, for instance, a vector of pointers is utilized to manage and access all dynamically allocated instances of a class.
 
 Dynamic memory management:
 Dynamic String Allocation: In the case where the user input is invalid (level greater than 4 or less than 1), dynamic memory allocation is used to create a new string object gotIt. This string is used to inform the user of the invalid input and measures taken. For example: string *gotIt = new string;.
