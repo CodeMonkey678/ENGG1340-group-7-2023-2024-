@@ -6,12 +6,21 @@
 #include <sstream>
 using namespace std;
 
-int levels(string name){
-    int level;
-    map<string,int> leveling;
+/*
+    - the levels function takes user name, checks to see if it is first time or existing
+    - if first time, function welcomes user, introduces him to which levels they can choose
+    - Otherwise, it checks previous score to determine which levels can be selected
+    - function checks to see if level chosen is valid
+    - Prints out messages to interact with user, then finally returns an integer
+    - which is used for determining game difficulty
+*/
+
+int levels(string name){ 
+    int level; // value to be returned to SnakeGame
+    map<string,int> leveling; // unload data from scoreBoard.txt for efficient manipulation
 
     ofstream Board;
-    Board.open("scoreBoard.txt", ios::app);
+    Board.open("scoreBoard.txt", ios::app); // ensures file is created in case first-time
 
     if(Board.fail()){
         cout << "File open error... please restart program" << endl;
@@ -20,31 +29,33 @@ int levels(string name){
     Board.close();  // will work for first-time creating a file
 
     ifstream writer;
-    writer.open("scoreBoard.txt");
+    writer.open("scoreBoard.txt"); // file will be empty first-time playing
     if(writer.fail()){
         cout << "File open error... please restart program" << endl;
         exit(1);
     }
-    string line, word;
-    int nameScore;
-    bool failed = true;
+    
+    string line, word; // line for taking whole line from file, word for istringstream
+    int nameScore; // temporariry storing each name's score
+    
     while(getline(writer, line)){
         //wanna treat 'line' as a new input, and traverse through it
         istringstream iss(line);
         //traversing through the single line below
         while(iss>>word){
-            if(!leveling.count(word)){
+            if(!leveling.count(word)){ 
                 while(iss>>nameScore){
-                    leveling[word]=nameScore;
+                    leveling[word]=nameScore; // this way, it stores every user-score in maps
                 }
             }
         }
     }
-    writer.close(); //we have our leveling, which has all the data
+    writer.close(); //we now have our leveling, which has all the data
 
-    if(leveling.count(name)>0){
+    if(leveling.count(name)>0){ //i.e. user not-first time, thus Welcome back
         cout << "\nWELCOME BACK, " << name << "!!!" << endl;
-        if((leveling[name]) > 950){
+        
+        if((leveling[name]) > 950){  // i.e 1000 and above, level 5 & 6 unlocked
             // ALL LEVELS UNLOCKED! RETURN ANY DESIRABLE LEVEL
                 cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
                 cout <<"    1 for Easy," << endl;
@@ -70,9 +81,10 @@ int levels(string name){
                     cout << endl;
                     level = 1;
                 }
-            return level;
+            return level; //terminates here for unlocked levels
         } else {
-            // not unlocked, low scores
+            
+            // not unlocked, previous score 900 or below
                 cout << "Choose Game Difficulty by INSERTING 1,2,3,4,5 or 6:" << endl;
                 cout <<"    1 for Easy," << endl;
                 cout <<"    2 for Medium," << endl;
