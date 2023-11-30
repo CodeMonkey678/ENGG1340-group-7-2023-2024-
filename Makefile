@@ -30,8 +30,3 @@ run: $(EXECUTABLE)
 
 .PHONY: compile clean run
 
-
-
-
-
-
