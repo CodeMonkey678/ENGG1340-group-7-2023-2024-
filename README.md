@@ -118,6 +118,7 @@ The dynamic memory allocation and deallocation are employed to handle user input
 
 File input/output (e.g., for loading/saving game status):
 scoring.cpp opens a file named "scoreBoard.txt" to store game scores. It reads existing scores from the file and stores them in a map called mapping. New scores are added to the map. The updated scores are written back to the file, and the current standings are displayed to the user. The file is closed after the operations are completed.
+levels.cpp uses file input/output to load and save game status. It reads player names and scores from a file, stores them in a map, and also allows the user to choose a game difficulty level. The updated game status may be saved back to the file where it can be used to unlock higher levels in the game.
 
 Program codes in multiple files:
 The game has been implemented using multiple files to organize and separate different components of the game. Each file focuses on a specific aspect of the game, such as the game logic, user input, and scoring etc. This allows for better code organization, reusability, and maintainability. By dividing the code into multiple files, it becomes easier to manage and work on individual components independently while ensuring proper integration between them.
