@@ -37,15 +37,10 @@ Choose a level from 1-6
 Level descriptions:
 
 1 for Easy
-
 2 for Medium
-
 3 for Hard
-
 4 for Extreme
-
 5 for Nightmare
-
 6 for HELL!
 
 The higher the level, the faster the snake moves, the faster the pace of the game is
@@ -100,11 +95,7 @@ variety of levels with a range of difficulties
 
 Generation of random game sets or events:
 Generation of random position for an apple within the game board, using the rand() function to generate random coordinates for x and y. The resulting position is returned.
-Member called Apple_Generation() within a class named SnakeGame. This function is responsible for generating a new apple position within the game board.
-The function starts by declaring a variable called newApple of type Position.
-Next, the x coordinate of the newApple position is set to a random value between 0 and width - 1. This is achieved by using the modulo operator % with the rand() function, which generates a random number.
-Similarly, the y coordinate of the newApple position is set to a random value between 0 and height - 1 using the same approach.
-Finally, the function returns the newApple position.
+Member called Apple_Generation() within a class named SnakeGame. This function is responsible for generating a new apple position within the game board. The function starts by declaring a variable called newApple of type Position. Next, the x coordinate of the newApple position is set to a random value between 0 and width - 1. This is achieved by using the modulo operator % with the rand() function, which generates a random number. Similarly, the y coordinate of the newApple position is set to a random value between 0 and height - 1 using the same approach. Finally, the function returns the newApple position.
 
 
 Data structures for storing game status:
@@ -117,8 +108,7 @@ The dynamic memory allocation and deallocation are employed to handle user input
 
 
 File input/output (e.g., for loading/saving game status):
-scoring.cpp opens a file named "scoreBoard.txt" to store game scores. It reads existing scores from the file and stores them in a map called mapping. New scores are added to the map. The updated scores are written back to the file, and the current standings are displayed to the user. The file is closed after the operations are completed.
-levels.cpp uses file input/output to load and save game status. It reads player names and scores from a file, stores them in a map, and also allows the user to choose a game difficulty level. The updated game status may be saved back to the file where it can be used to unlock higher levels in the game.
+scoring.cpp opens a file named "scoreBoard.txt" to store game scores. It reads existing scores from the file and stores them in a map called mapping. New scores are added to the map. The updated scores are written back to the file, and the current standings are displayed to the user. The file is closed after the operations are completed. levels.cpp uses file input/output to load and save game status. It reads player names and scores from a file, stores them in a map, and also allows the user to choose a game difficulty level. The updated game status may be saved back to the file where it can be used to unlock higher levels in the game.
 
 Program codes in multiple files:
 The game has been implemented using multiple files to organize and separate different components of the game. Each file focuses on a specific aspect of the game, such as the game logic, user input, and scoring etc. This allows for better code organization, reusability, and maintainability. By dividing the code into multiple files, it becomes easier to manage and work on individual components independently while ensuring proper integration between them.
@@ -145,11 +135,7 @@ This is the main file containing the logic of the game. Contains functions to re
 
 
 levels.cpp levels.h:
-Contains the level function which takes user name, checks to see if it is first time or existing, if first time, function welcomes user, introduces him to which levels they can choose
-Otherwise, it checks previous score to determine which levels can be selected
-function checks to see if level chosen is valid
-Prints out messages to interact with user, then finally returns an integer
-which is used for determining game difficulty
+Contains the level function which takes user name, checks to see if it is first time or existing, if first time, function welcomes user, introduces him to which levels they can choose Otherwise, it checks previous score to determine which levels can be selected, function checks to see if level chosen is valid,Prints out messages to interact with user, then finally returns an integer, which is used for determining game difficulty.
 
 
 scoring.cpp scoring.h: 
