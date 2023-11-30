@@ -16,6 +16,17 @@ Compilation and execution instructions:
 Download the zip file of the game, open the file and download it onto your computer. Next, save it all into a single directory and start the compilation.
 Compile the files by executing the command : make compile
 
+IMPORTANT NOTE: The files in the repository named
+
+SnakeGameInput1_1.txt,
+SnakeGameInput1_2.txt,
+SnakeGameInput1_3.txt,
+SnakeGameOutput1_1.txt,
+SnakeGameOutput1_2.txt,
+SnakeGameOutput1_3.txt,
+
+Are used for sample testing only, it does NOT represent the File Input/Output (for loading and storing game status) aspect of our game, that feature of our game is done using a different file: scoring.cpp and levels.cpp where its explained in more detail below. 
+
 Starting the game: 
 start the game by running ./snake after compiling and linking the files using the command "make compile"
 
